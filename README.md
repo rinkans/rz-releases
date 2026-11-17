@@ -16,9 +16,21 @@ macOS (Terminal):
 curl -fsSL https://github.com/rinkans/rz-releases/releases/latest/download/install.sh | sh
 ```
 
-Test builds follow the `mac-test` channel:
-- **macOS:** add `-s -- --channel mac-test` after `sh`.
-- **Windows:** run `$env:RZ_CHANNEL = 'mac-test'` first.
+### Test builds
+
+Test builds come on the `mac-test` channel: a prerelease, replaced by each new build. Copies installed from it update to each new test build.
+
+macOS (Terminal):
+
+```bash
+curl -fsSL https://github.com/rinkans/rz-releases/releases/download/mac-test/install.sh | sh -s -- --channel mac-test
+```
+
+Windows (PowerShell):
+
+```powershell
+$env:RZ_CHANNEL = 'mac-test'; irm https://github.com/rinkans/rz-releases/releases/download/mac-test/install.ps1 | iex
+```
 
 ## Updates
 
